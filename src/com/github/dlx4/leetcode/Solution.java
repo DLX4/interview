@@ -48,11 +48,64 @@ public class Solution {
         return sbBin.toString() + "," + sbHex.toString().toUpperCase();
     }
 
+
+    /**
+     * 将输入的十进制数字转换为对应的二进制字符串和十六进制字符串
+     *
+     * @param number string字符串 十进制数字字符串
+     * @return string字符串
+     */
+    public String changeFormatNumber2(String number) {
+        // write code here
+        int value;
+        try {
+            value = Integer.parseInt(number);
+        } catch (Exception e) {
+            return "INPUTERROR";
+        }
+
+        if (value < Short.MIN_VALUE || value > Short.MAX_VALUE) {
+            return "NODATA";
+        }
+
+        String bin = Integer.toBinaryString(value);
+        StringBuilder sbBin = new StringBuilder();
+        if (value >= 0) {
+            int temp = 8 - bin.length();
+            for (int i = 0; i < temp; i++) {
+                sbBin.append("0");
+            }
+            sbBin.append(bin);
+        } else {
+            sbBin.append(bin.substring(24));
+        }
+
+        String hex = Integer.toHexString(value);
+        StringBuilder sbHex = new StringBuilder();
+        if (value >= 0) {
+            int temp = 2 - hex.length();
+            for (int i = 0; i < temp; i++) {
+                sbHex.append("0");
+            }
+            sbHex.append(hex);
+        } else {
+            sbHex.append(hex.substring(6));
+        }
+
+        return sbBin.toString() + "," + sbHex.toString().toUpperCase();
+    }
+
     public static void main(String[] args) {
         System.out.println(new Solution().changeFormatNumber("15"));
         System.out.println(new Solution().changeFormatNumber("-1"));
         System.out.println(new Solution().changeFormatNumber("-2"));
         System.out.println(new Solution().changeFormatNumber("A"));
+
+
+        System.out.println(new Solution().changeFormatNumber2("15"));
+        System.out.println(new Solution().changeFormatNumber2("-1"));
+        System.out.println(new Solution().changeFormatNumber2("-2"));
+        System.out.println(new Solution().changeFormatNumber2("A"));
     }
 
 
