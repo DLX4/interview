@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59dfd5f3-4da7-445e-a674-e94ad9c63a8a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/deadlock/DeadLockSample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/helloworldthread/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/juc/CyclicBarrierSample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/juc/LatchSample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/juc/UsualSemaphoreSample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/rwlock/RWSample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/rwlock/StampedSample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/dlx4/java/juc/ConsumerProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/interview/com/github/dlx4/leetcode/s0003/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/interview/com/github/dlx4/leetcode/s0003/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/github/dlx4/leetcode/s0004/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/dlx4/leetcode/s0004/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LatchSample.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LatchSample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/dlx4/java/juc/LatchSample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -85,6 +77,22 @@
                 <element signature="e#995#996#0" expanded="true" />
                 <element signature="e#1254#1255#0" expanded="true" />
                 <element signature="e#1288#1289#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsumerProducer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/github/dlx4/java/juc/ConsumerProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#1630#1631#0" expanded="true" />
+                <element signature="e#1668#1669#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/com/github/dlx4/java/juc/UsualSemaphoreSample.java" />
         <option value="$PROJECT_DIR$/src/com/github/dlx4/java/juc/LatchSample.java" />
         <option value="$PROJECT_DIR$/src/com/github/dlx4/java/juc/CyclicBarrierSample.java" />
+        <option value="$PROJECT_DIR$/src/com/github/dlx4/java/juc/ConsumerProducer.java" />
       </list>
     </option>
   </component>
@@ -251,24 +260,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dlx4" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="deadlock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="interview" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interview" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dlx4" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="juc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="interview" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interview" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dlx4" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="juc" type="462c0819:PsiDirectoryNode" />
-              <item name="LatchSample.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="interview" type="b2602c69:ProjectViewProjectNode" />
@@ -316,7 +308,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LatchSample">
+  <component name="RunManager" selected="Application.ConsumerProducer">
+    <configuration name="ConsumerProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.dlx4.java.juc.ConsumerProducer" />
+      <module name="interview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.dlx4.java.juc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="CyclicBarrierSample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.dlx4.java.juc.CyclicBarrierSample" />
       <module name="interview" />
@@ -333,16 +335,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.github.dlx4.java.deadlock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.dlx4.java.helloworldthread.HelloWorld" />
-      <module name="interview" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.dlx4.java.helloworldthread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -368,19 +360,19 @@
       </extension>
     </configuration>
     <list>
-      <item itemvalue="Application.HelloWorld" />
       <item itemvalue="Application.DeadLockSample" />
       <item itemvalue="Application.UsualSemaphoreSample" />
       <item itemvalue="Application.LatchSample" />
       <item itemvalue="Application.CyclicBarrierSample" />
+      <item itemvalue="Application.ConsumerProducer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsumerProducer" />
         <item itemvalue="Application.LatchSample" />
         <item itemvalue="Application.CyclicBarrierSample" />
         <item itemvalue="Application.UsualSemaphoreSample" />
         <item itemvalue="Application.DeadLockSample" />
-        <item itemvalue="Application.HelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -409,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43046000" />
+    <option name="totallyTimeSpent" value="43115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -511,7 +503,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[1]两数之和.java" />
     <entry file="file://$PROJECT_DIR$/leetcode/editor/cn/all.json" />
     <entry file="file://$PROJECT_DIR$/leetcode/editor/cn/translation.json" />
     <entry file="file://$PROJECT_DIR$/leetcode/editor/cn/[1]两数之和.md" />
@@ -828,6 +819,20 @@
             <element signature="e#995#996#0" expanded="true" />
             <element signature="e#1254#1255#0" expanded="true" />
             <element signature="e#1288#1289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/dlx4/java/juc/ConsumerProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
           </folding>
         </state>
       </provider>
