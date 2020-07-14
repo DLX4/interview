@@ -27,7 +27,36 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int lengthOfLongestSubstring(String s) {
+        int result = 0;
 
+        // 借助map标记重复字符的位置
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0, start = 0; i < s.length(); i++) {
+            Character cur = s.charAt(i);
+
+            if (map.containsKey(cur)) {
+                // 当前end位置字符重复 区间[start,end)
+                // result = Math.max(result, i - start);
+                // 更新滑动窗口，start = 上一次该字符出现的位置+1
+                int lastCurIndex = map.get(cur) + 1;
+                while (start < lastCurIndex) {
+                    map.remove(s.charAt(start));
+                    start++;
+                }
+                // System.out.println("[" + start + " " + i + "]");
+            } else {
+                // 当前end位置字符不重复 区间[start,end]
+                result = Math.max(result, i - start + 1);
+                // System.out.println(result);
+                // System.out.println("[" + start + " " + i + "]");
+            }
+
+            // 标记字符位置(最近一次出现)
+            map.put(cur, i);
+        }
+
+        return result;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
